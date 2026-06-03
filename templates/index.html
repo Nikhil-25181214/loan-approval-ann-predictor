@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loan Approval Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Loan Approval Predictor</h1>
+
+    <form id="loanForm">
+
+        <select id="gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+
+        <select id="married">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <input type="number" id="dependents" placeholder="Dependents">
+
+        <select id="education">
+            <option value="0">Graduate</option>
+            <option value="1">Not Graduate</option>
+        </select>
+
+        <select id="self_employed">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <input type="number" id="income" placeholder="Applicant Income">
+
+        <input type="number" id="coincome" placeholder="Coapplicant Income">
+
+        <input type="number" id="loanamount" placeholder="Loan Amount">
+
+        <input type="number" id="loanterm" placeholder="Loan Amount Term">
+
+        <select id="credit">
+            <option value="1">Good Credit History</option>
+            <option value="0">Bad Credit History</option>
+        </select>
+
+        <select id="area">
+            <option value="semiurban">Semiurban</option>
+            <option value="urban">Urban</option>
+            <option value="rural">Rural</option>
+        </select>
+
+        <button type="submit">Predict Loan</button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
